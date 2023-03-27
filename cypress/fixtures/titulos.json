@@ -1,22 +1,27 @@
 [
     {
         "title":"Aprender Testing | Free Range Testers",
-        "location":"https://www.freerangetesters.com/home"
+        "location":"https://www.freerangetesters.com/home",
+        "name":"Home"
     },
     {
         "title":"Blog | Free Range Testers",
-        "location":"https://www.freerangetesters.com/blog"
+        "location":"https://www.freerangetesters.com/blog",
+        "name":"Blog"
     },
     {
         "title":"Cursos | Free Range Testers",
-        "location":"https://www.freerangetesters.com/cursos"
+        "location":"https://www.freerangetesters.com/cursos",
+        "name":"Curos"
     },
     {
         "title":"Podcast | Free Range Testers",
-        "location":"https://www.freerangetesters.com/podcast"
+        "location":"https://www.freerangetesters.com/podcast",
+        "name":"Podcast"
     },
     {
         "title":"Conocenos | Free Range Testers",
-        "location":"https://www.freerangetesters.com/conocenos"
+        "location":"https://www.freerangetesters.com/conocenos",
+        "name":"Conocenos"
     }
 ]
