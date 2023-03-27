@@ -1,26 +1,24 @@
 /// <reference types="cypress" />
 
-describe('Practica usando katalon-demo-cura', () => {
+describe('Test de login', () =>{
 
     beforeEach(() =>{
         cy.visit('https://katalon-demo-cura.herokuapp.com/')
-    })
-
-    it('Verificar titulo', () => {
-        cy.get('h1').should('have.text', 'CURA Healthcare Service')
-    })
-
-    it('Verificar subtitulo', () => {
-        cy.get('h3').should('have.text','We Care About Your Health')
-    })
-
-    it('Verificar que el boton de la pagina de inicio', () => {
-        cy.get('#btn-make-appointment').should('be.visible').and('have.text','Make Appointment')
-    })
-
-    it('Verificar que se puede ir a la pagina de login', () => {
+        cy.fixture('login').then(function(testdate){
+            this.testdate = testdate
+        })
         cy.get('#btn-make-appointment').click()
-        cy.get('h2').should('be.visible')
+    })
+
+    it('Verificar el titulo de la pagina de login', () =>{
+        cy.get('h2').should('have.text','Login')
+    })
+
+    it('Verificar que el usuario se pueda logear', function() {
+        cy.get('#txt-username').type(this.testdate.username)
+        cy.get('#txt-password').type(this.testdate.password)
+        cy.get('#btn-login').click()
+        cy.url().should('contain','/#appointment')
     })
 
 })
